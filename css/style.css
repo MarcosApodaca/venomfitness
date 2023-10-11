@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "My-font";
+  src: url(./HelveticaNowText-ExtraLight.woff2) format('woff2');
+  src: url(./HelveticaNowText-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "My-font2";
+  src: url(./HelveticaNowText-ExtraBold.woff2) format('woff2');
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+:root{
+    --red: #e50914;
+    --black: #2d2d2d;
+  
+  }
+
+  .contenedor{
+    max-width: 110rem;
+    margin: 0 auto;
+    width: 100%;
+   
+}
+
+
+
+body{
+  font-family: 'My-font', HelveticaNowText-Light;
+  background-color: #fff
+}
+
+p, h3 {
+  color: #fff;
+
+}
+
+a{ 
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
+  /* header */
+
+.header{
+    background-color: rgba(0, 0, 0, .5) ;
+    height: 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transition: background-color 0.5s ease;
+  }
+
+
+.navegacion_grid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion_logo{
+    width: 10rem;
+}
+
+.navegacion_enlace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlace{
+    margin-left: 5rem;
+}
+
+.navegacion_enlace a:hover{
+    color: var(--red);
+    transition: .3s;
+}
+
+.enlace{
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.enlace::before {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: var(--red);
+  display: block;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.enlace:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+
+.enlace:nth-child(3){
+  background-color: var(--red);
+  padding: .7rem;
+  border-radius: 1.2rem;
+  
+}
+
+.enlace:nth-child(3)::before{
+  width: 0;
+}
+
+.enlace:nth-child(3):hover{
+  background-color: #fff;
+  color: #e50914;
+}
+
+
+
+/* MAIN */
+
+
+
+.section{
+  padding: 10rem;
+  margin-bottom: 20rem;
+  background-image: url(../img/Strength-Training-Gear-Pros-Recommend-Gear-503416862.webp);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center 75%;
+  background-attachment:fixed;
+  width: 100%;
+  height: 100rem;
+
+}
+
+.main_grid{
+  margin: 15rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.main-h{
+  opacity: 0;
+  animation: text 1s ease-in-out forwards;
+}
+
+.main_h1 {
+  color: #fff;
+  font-family: 'My-font2';
+  font-size: 8rem;
+}
+
+.main_btn{
+  background-color: var(--red);
+  border-radius: 1.2rem;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  animation: text 1s ease-in-out forwards;
+}
+
+.main_btn:hover{
+  background-color: #fff;
+  cursor: pointer;
+  color: var(--red);
+  transition: .5s;
+}
+
+
+@keyframes text {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/*SLIDE */
+
+.slide{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 50px auto 0;
+  background-color: rgba(77, 72, 72, 1);
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.slide-contenedor{
+  max-width: 120rem;
+  right: 15%;
+}
+
+.slide ul {
+  display: flex;
+  padding: 0;
+  width: 800%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slide li {
+  width: 90%;
+  list-style: none;
+  position: relative;
+  padding: 2rem;
+}
+
+.slide_info{
+  position: absolute;
+  top: 0;
+  left: 40rem;
+}
+
+.slide_info p{
+  font-size: 1.5rem;
+}
+
+.slide_info h3 {
+  font-size: 3rem;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.slide img {
+  object-fit: cover;
+}
+
+
+
+
+@keyframes slide {
+  0% { margin-left: 0;}
+  20% { margin-left: 0;}
+
+  25% { margin-left: -100%;}
+  45% { margin-left: -100%;}
+
+  50% { margin-left: -200%;}
+  70% { margin-left: -200%;}
+
+  75% { margin-left: -300%;}
+  100% { margin-left: -300%;}
+}
+
+
+/* PLANO */
+
+.plano-contenedor{
+  max-width: 120rem;
+  left: 60rem;
+  margin-bottom: 15rem;
+  position: relative;
+}
+
+.plano-grid{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rem;
+  background-color: rgba(77, 72, 72, 1);
+  border-radius: 1rem;
+}
+
+
+.plano_contenido{
+  padding: 3rem;
+}
+
+.plano-grid img{
+  width: 50%;
+}
+
+.plano_info{
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+.plano_info span {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+
+/* FOOTER */
+
+footer{
+  background-color: rgba(77, 72, 72, 0.2);
+  
+}
+
+.contenedor-flex{
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.footer-logo img{
+  width: 10rem;
+}
+
+.contenedor-flex li {
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+
+
+.contenedor-flex ul p{
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.footer_list li a:hover{ 
+  color: #e50914;
+}
+.footer-bottom p{
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
+
