@@ -16,4 +16,18 @@
 //     }
 // });
 
-// console.log(screenY);
+
+
+const menu_nav = document.getElementById("menu_nav")
+const navToggle = document.getElementById("navToggle")
+
+
+navToggle.addEventListener("click", function() {
+    if (menu_nav.classList.contains("hidden")) {
+      menu_nav.classList.remove("hidden"); // Mostrar el menú
+    } else {
+      menu_nav.classList.add("hidden"); // Ocultar el menú
+    }
+  });
+
+

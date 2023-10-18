@@ -7,16 +7,17 @@
     <meta name="theme-color" content="#09f">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./script.js" defer></script>
-
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <header id="m-header" class="header">
         <div class="contenedor">
-            <nav class="navegacion">
-                <div class="navegacion_grid">
+            <nav class="navegacion_grid">
                 <img class="navegacion_logo" src="./img/Png-White.png" alt="logo">
-                <div class="navegacion_enlace">
+                <button id="navToggle"></button>
+                <!-- <a href="#" class="navToggle"><img class="menu" src="./img/menu-2.svg" alt="icono menu"></a> -->
+                <div id="menu_nav" class="navegacion_enlace hidden"  >
+                    
                 <a class="enlace" href="#">
                     <span class="text">Inicio</span>
                     <span class="line -right"></span>
@@ -27,13 +28,11 @@
                 <a class="enlace" href="#">Entrenamiento</a>
                 <a class="enlace" href="./inscripcion.html">INSCRIBETE</a>
                 </div>
-                </div>
-                <div>
-
-                </div>
             </nav>
         </div>
     </header>
+                
+                
    <section class="section">
         <main class="contenedor">
             <div class="main_grid">
