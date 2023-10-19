@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+            <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venom Fitness</title>
+    <meta name="theme-color" content="#09f">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./script.js" defer></script>
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <header id="m-header" class="header">
         <div class="contenedor">
-            <nav class="navegacion">
-                <div class="navegacion_grid">
+            <nav class="navegacion_grid">
                 <img class="navegacion_logo" src="./img/Png-White.png" alt="logo">
-                <div class="navegacion_enlace">
+                <button type="checkbox" id="navToggle"  class="menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <!-- <a href="#" class="navToggle"><img class="menu" src="./img/menu-2.svg" alt="icono menu"></a> -->
+                <div id="menu_nav" class="navegacion_enlace"  >
+                    
                 <a class="enlace" href="./index.html">
                     <span class="text">Inicio</span>
                     <span class="line -right"></span>
@@ -23,22 +30,36 @@
                     <span class="line -bottom"></span>
                 </a>
                 <a class="enlace" href="#">Entrenamiento</a>
-                <a class="enlace" href="#">INSCRIBETE</a>
+                <a class="enlace" href="./inscripcion.html">INSCRIBETE</a>
+                <br>
+                <p class="menu_info"><strong>Horario:</strong> <br>
+                    Lunes - Viernes 7:00 - 00:00 <br>
+                    Sabado - Domingo 8:00 - 15:00
+                </p>
+                <br>
+                <p class="menu_info"> <strong>Dirección:</strong> <br>
+                    Centro Commercial, Carrer les Mates, 2-12, 43700 El Vendrell, Tarragona
+                </p>
+                <br>
+                <a class="info-llamada" href="tel:+123456789">Llamar a: +34-456-789-654</a>
+                <a class="info-correo" href="mailto:correo@example.com">
+                    
+                    Enviar un correo
+                    correo@example.com
+                </a>
                 </div>
-                </div>
-                <div>
-
-                </div>
+                
             </nav>
         </div>
     </header>
     <section class="contenedor">
         
-            <h2 class="head-inscripcion">INSCRIPCION</h2>
+            <h2 class="head-inscripcion">Membresía Fitness: <br>
+                Activa Tu Potencial</h2>
         
         <main class="pago-grid">
             <div class="pago-contenido">
-                <h3 class="pago_head">CON PERMANENCIA</h3>
+                <h3 class="pago_premium">PREMIUN</h3>
                 <p class="pago_price">35€</p>
                 <p class="pago_fecha">durate 4 semanas</p>
                 <ul class="pago_lista">
@@ -100,7 +121,7 @@
                 <div class="footer-links">
                     
                     <ul class="footer_list">
-                        <p>Links:</p>
+                        <p><strong>Links:</strong></p>
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Entrenamiento</a></li>
                         <li><a href="#">Servicios</a></li>
@@ -110,7 +131,7 @@
                 <div class="footer-contact">
                     
                     <ul>
-                        <p>Contacto:</p>
+                        <p><strong>Contacto:</strong></p>
                         <li>Email: venonfitness.com</li>
                         <li>Teléfono: +34 657 456 789</li>
                         <li>Dirección: Calle Principal, Vendrell</li>
@@ -119,7 +140,7 @@
                 <div class="footer-social">
                 
                 <ul class="footer_list">
-                    <p>Síguenos en las redes sociales:</p>
+                    <p><strong>Síguenos en las redes sociales:</strong></p>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Youtube</a></li>
                 </ul>
