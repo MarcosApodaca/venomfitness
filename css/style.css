@@ -115,12 +115,16 @@ a{
   padding: 2rem 0;
   background-color: rgba(0, 0, 0, .9);
   left: 20%;
-  transition: left 0.4s;
+  transition: left 0.6s;
+}
+
+.navegacion_enlace a {
+  animation:  1s ease-in-out forwards;
 }
 
 .hidden{
   left:100%;
-  transition: left 0.4s;
+  transition: left 0.6s;
 }
 
 .enlace{
@@ -129,6 +133,11 @@ a{
 
 .menu{
   width: 3rem;
+}
+
+.menu_info{
+  width: 60%;
+  margin-left: 5rem;
 }
 
 
@@ -227,6 +236,12 @@ a{
 
 }
 
+.main_grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 @media ( min-width: 768px) { 
   .main_grid{
@@ -236,10 +251,17 @@ a{
     width: 60%;
   }
 
-  .main-h{
-    opacity: 0;
-    animation: text 1s ease-in-out forwards;
-  }
+}
+
+.main_h1{
+  font-size: 5rem;
+  text-align: center;
+  margin: 5rem 0 25rem 0;
+}
+
+.main-h{
+  opacity: 0;
+  animation: text 1s ease-in-out forwards;
 }
 
 .main_btn{
@@ -308,7 +330,7 @@ a{
   position: relative;
   width: 100%;
   height: auto;
-  margin: 50px auto 0;
+  margin: 5rem auto 0;
   background-color: rgba(0, 0, 0, .9);
   overflow: hidden;
   scroll-snap-type: x mandatory;
@@ -317,9 +339,27 @@ a{
 }
 
 .slide-contenedor{
-  max-width: 120rem;
-  /*right: 15%;*/
+  max-width: 90%;
 }
+
+@media ( min-width: 768px){
+  .slide{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0;
+    background-color: rgba(0, 0, 0, .9);
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .slide-contenedor{
+    max-width: 120rem;
+    /*right: 15%;*/
+  }
+}
+
 
 .slide ul {
   display: flex;
