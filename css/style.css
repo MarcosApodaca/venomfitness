@@ -326,7 +326,6 @@ a{
 
 
 .section{
-  padding: 10rem;
   background-image: url(../img/istockphoto-868852476-2048x2048.jpg);
   background-repeat: no-repeat;
   background-size:cover;
@@ -345,12 +344,10 @@ a{
 
 
 
-
-
 .main_h1{
-  font-size: 5rem;
-  text-align: center;
-  margin: 5rem 0 25rem 0;
+  font-size: 3rem;
+  margin: 0 0 25rem 0;
+  text-transform: uppercase;
 }
 
 @media ( min-width: 768px) { 
@@ -362,6 +359,7 @@ a{
 }
 
 .main-h{
+  margin-top: 15rem;
   opacity: 0;
   animation: text 1s ease-in-out both;
 }
