@@ -197,17 +197,20 @@ a{
 
 .mostrar{
   max-height: 100%;
-  animation: animacion .5s ease-in-out both;
+  animation: animacion 1s ease-in-out both;
 }
 
 .info-llamada{
+  margin-top: 10rem;
   margin-left: 5rem;
   font-size: 1.3rem;
+ 
 }
 
 .info-correo{
   margin-left: 5rem;
   font-size: 1.3rem;
+ 
 }
 
 
@@ -452,6 +455,17 @@ a{
   text-transform: uppercase;
 }
 
+.marca_tittle::after{
+  content: "";
+  display: block;
+  border-bottom: solid var(--secundario) 2px;
+  margin: 0 auto;
+}
+
+.marca_content{
+  margin-top: 5rem;
+}
+
 .marca_img {
   margin: 0 auto;
 }
@@ -498,7 +512,7 @@ a{
 
 .pin-wrap {
 	height: 100vh;
-	width: 500vmax;
+	width: 600vmax;
 
 	/* will-change: transform;
 	animation: linear move forwards;
@@ -549,12 +563,17 @@ a{
   max-width: 55%;
   font-size: 2rem;
   color: #000;
-  border-bottom: #d9b84f solid 1px;
-  border-bottom-width: 2px;
   animation: efect auto linear both ;
   animation-timeline: view();
   animation-range: entry 20% cover 30%;
 
+}
+
+.article h3::after{
+  content: "";
+  display: block;
+  border-bottom: solid var(--secundario) 3px;
+  width: 30%;
 }
 
 
@@ -639,7 +658,7 @@ a{
     border-radius: 1rem;
   }
   .slide-contenedor{
-    max-width: 120rem;
+    max-width: 110rem;
     /*right: 15%;*/
   }
 }
@@ -649,7 +668,7 @@ a{
   display: flex;
   padding: 0;
   width: 200%;
-  animation: slide 20s infinite alternate ease-in-out;
+  animation: slide 10s infinite alternate ease-in-out;
 }
 
 .contenedor_logo{
@@ -1126,3 +1145,29 @@ ul{
   from { opacity: 0;}
   to { opacity: 1;}
 }
+
+/* 
+.unique_content{
+  position: relative;
+  max-width: 100%;
+}
+
+.unique{
+  position: absolute;
+  transform: rotate(20deg);
+  background-color: #d9b84f;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+}
+
+
+
+@media ( min-width: 768px) { 
+  .unique_content{
+    display: none;
+  }
+} */

@@ -18,22 +18,23 @@
 
 
 
-const navToggle = document.getElementById("navToggle")
-const menu_nav = document.getElementById("menu_nav")
+const navToggle = document.getElementById("navToggle");
+const menu_nav = document.getElementById("menu_nav");
 
-let parrafo = document.getElementById('texto-largo');
-let parrafo1 = document.getElementById('texto-largo1')
+const parrafo = document.getElementById('texto-largo');
+const parrafo1 = document.getElementById('texto-largo1');
+const infoLlamada = document.getElementById('infoLlamada');
+const infoCorreo = document.getElementById('infoCorreo');
+
 
 navToggle.addEventListener('click', function() {
   parrafo.classList.toggle('mostrar');
+  parrafo1.classList.toggle('mostrar');
+  menu_nav.classList.toggle("hidden");
+  infoLlamada.classList.toggle('mostrar');
+  infoCorreo.classList.toggle('mostrar');
 });
 
-navToggle.addEventListener('click', function() {
-  parrafo1.classList.toggle('mostrar');
-});
-navToggle.addEventListener("click", () => {
-  menu_nav.classList.toggle("hidden")
-});
 
 
 
