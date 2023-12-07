@@ -346,9 +346,19 @@ a{
 }
 
 
+.hero-h{
+    margin-top: 15rem;
+    animation: text 1s ease-in-out both;
+}
+
+@media ( min-width: 768px) { 
+    .hero-h{
+      margin-bottom: 5rem;
+    }
+}
 
 .hero_h1{
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0 0 25rem 0;
   text-transform: uppercase;
 }
@@ -356,22 +366,11 @@ a{
 @media ( min-width: 768px) { 
   .hero_h1{
     font-size: 9rem;
-    text-align: start;
-    margin: 0 5rem;
+    margin: 0 0 25rem 0;
+    
   }
 }
 
-.hero-h{
-  margin-top: 15rem;
-  opacity: 0;
-  animation: text 1s ease-in-out both;
-}
-
-@media ( min-width: 768px) { 
-  .hero-h{
-    margin-bottom: 5rem;
-  }
-}
 
 
 .hero_btn{
@@ -509,20 +508,32 @@ a{
   display: flex;
 }
 
+.contenedor_textoimg p {
+  color: #000;
+  font-size: 2.5rem;
+}
+
+.contenedor_textoimg img {
+  margin: 2.5rem 0 auto
+}
+
 .pin-h2{
   font-size: 3rem;
 }
 
 .pin_img{
   height: 59vh;
-  width: auto;
+  width: 18%;
   max-width: 100%;
+  object-fit: cover;
   margin-left: 5rem;
   border-radius: 5px;
 }
 
 @media ( min-width: 768px) { 
-
+  .pin_img {
+    width: auto;
+  }
   .pin-h2{
     max-width: 100%;
     text-transform: uppercase;
@@ -543,11 +554,13 @@ a{
   margin-bottom: 10rem;
   display: grid;
   gap: 1rem;
+  padding: 1.5rem;
 }
 
 @media ( min-width: 768px) { 
   .article {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0;
   }
 }
 
@@ -569,6 +582,7 @@ a{
 }
 
 
+
 @media ( min-width: 768px) { 
   .article_img1 {
     columns: 1/2;
@@ -578,11 +592,17 @@ a{
 
 .article img {
   max-width: 100%;
-  width: 500px;
-  height: 300px;
   animation: efect auto linear both ;
   animation-timeline: view();
   animation-range: entry 20% cover 25%;
+}
+
+@media ( min-width: 768px) { 
+  .article_img{
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+  }
 }
 
 .article_text p{
@@ -822,20 +842,6 @@ footer{
   .footer-logo img{
     width: 13rem;
   }
-  
-  .icon{
-    display: flex;
-    margin-right: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .icon img{
-    width: 3.5rem;
-    
-  }
-  .icon_ig{
-    margin-right: 1rem;
-  }
 }
 
 .contenedor-flex li {
@@ -856,7 +862,7 @@ ul{
   line-height: 2.1rem;
 }
 
-.footer-links p, .footer-contact p {
+.footer-links p, .footer-contact p, .footer-informacion p {
   border-right: solid 1px var(--secundario);
 }
 
@@ -948,7 +954,7 @@ ul{
 }
 
 .pago-contenido:nth-child(2){
-  background-image: url(../img/backGroud-pago.png);
+  background-image: url(../img/Png-White.png);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position-x: 90% ;
@@ -1062,14 +1068,15 @@ ul{
 .intalacion_title{
   color: #000;
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
   text-transform: uppercase;
-  
+  margin-top: 20rem;
+  font-size: 4rem;
 }
 
 @media ( min-width: 768px) { 
   .intalacion_title{
-    margin-top: 20rem;
+    margin-bottom: 10rem;
     font-size: 4rem;
   }
 }
@@ -1084,6 +1091,14 @@ ul{
 
 .entrada_grid{
   margin-bottom: 10rem;
+  padding: 1.5rem;
+}
+
+.entrada_grid P {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 
@@ -1092,13 +1107,14 @@ ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    padding: 0;
+  }
+  .entrada_grid P{
+    margin-bottom: 0;
   }
 }
 
-.entrada_grid P {
-  font-size: 2rem;
-  color: #000;
-}
+
 
 .entrada_img{
   width: 100%;
@@ -1113,6 +1129,10 @@ ul{
   }
 }
 
+.intalacion_grid {
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+}
 
 @media ( min-width: 768px) { 
   .intalacion_grid{
@@ -1121,6 +1141,7 @@ ul{
   grid-template-rows: repeat(1, 1fr);
   column-gap: 2rem;
   margin-bottom: 15rem;
+  padding: 0;
   }
 }
 
