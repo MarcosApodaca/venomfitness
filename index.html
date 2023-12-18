@@ -76,15 +76,26 @@
             <div class="pin-wrap">
                 <div class="contenedor_texto">
                     <h3 class="pin-h3">Somos el gimnasio que redefine tus límites</h3>
-                     
+                     <div>
                     <img class="contenedor_img" src="./img/hs-logo.png" alt="">
                     <img class="contenedor_img" src="./img/life-logo.png" alt="">
+                    </div>
                 </div>
                     <div class="pin-content">
-                    <img class="pin_img" src="./img/render/5_0000.jpg" alt="">
-                    <img class="pin_img" src="./img/render/9_0000.jpg" alt="">
-                    <img class="pin_img" src="./img/render/10_0000.jpg" alt="">
-                    <img class="pin_img" src="./img/render/11_0000.jpg" alt="">
+                    <picture >
+                        <source srcset="./img/render/pin1.webp" type="image/webp">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin1.jpg" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/render/pin2.webp" type="image/webp">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin2.jpg" width="500" height="300" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./img/render/pin3.webp" type="image/webp">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin3.jpg" width="500" height="300" alt="">
+                    </picture>
+                   
+                     
                 </div>
             </div>
         </div>
@@ -197,19 +208,28 @@
         <h3>ZONA DE CROSSFIT</h3>
         <p>Explora una experiencia única de entrenamiento al aire libre con nuestra zona especializada de CrossFit. Con un espacio amplio diseñado para potenciar tu rendimiento, te invitamos a superar tus límites y alcanzar tus metas fitness.</p>
     </div>
-    <img class="article_img" src="./img/render/30_0000.jpg" alt="">
+    <picture class="article_img">
+        <source srcset="./img/render/crossfit.webp" type="image/webp">
+        <img loading="lazy" src="./img/render/crossfit.jpg" width="500" height="300" alt="zona de crossfit">
+    </picture>
 
     <div class="article_text">
         <h3>ZONA DE CARDIO</h3>
         <p>Optimiza tu entrenamiento en nuestra zona de cardio. Equipada con lo último en tecnología fitness, te ofrecemos un espacio diseñado para impulsar tu resistencia y mejorar tu salud cardiovascular.</p>
     </div>
-    <img class="article_img1" src="./img/render/20_0000.jpg" alt="">
-
+    <picture class="article_img1">
+        <source srcset="./img/render/cardio.webp" type="image/webp">
+        <img loading="lazy" src="./img/render/cardio.jpg" width="500" height="300" alt="zona de cardio">
+    </picture>
+    
     <div class="article_text">
         <h3>ZONA DE MANCUERNA</h3>
         <p>Fortalece tu entrenamiento en nuestra exclusiva zona de mancuernas. Con equipamiento de calidad y espacio óptimo, te brindamos el entorno perfecto para potenciar tu fuerza.</p>
     </div>
-    <img class="article_img" src="./img/render/4_0000.jpg" alt="">
+    <picture class="article_img">
+        <source srcset="./img/render/mancuerna.webp" type="image/webp">
+        <img loading="lazy" src="./img/render/mancuerna.jpg" width="500" height="300" alt="">
+    </picture>
 
 </article>
 
@@ -220,10 +240,6 @@
             <div class="contenedor-flex">
                 <div class="footer-logo">
                     <img src="./img/backGroud-pago.png" alt="Logo de la empresa">
-                    <!-- <div class="icon">
-                        <a class="icon_ig" href="#"><img  src="./img/MdiInstagram.svg" alt="link Instagram"></a>
-                        <a href="#"><img  src="./img/MingcuteYoutubeLine.svg" alt="link Youtube"></a>
-                    </div> -->
                 </div>
                 <div class="footer-links">
                     

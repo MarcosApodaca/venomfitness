@@ -13,7 +13,7 @@
 }
 
 html {
-    box-sizing:  border-box;
+    box-sizing: border-box;
     font-size: 62.5%;
 
     
@@ -37,7 +37,7 @@ html {
 
 
 body{
-  font-family: 'My-font2' ;
+  font-family: 'My-font2';
   font-weight: normal;
   background-color: #fff;
   margin: 0;
@@ -426,20 +426,17 @@ a{
 @keyframes text {
     0% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateY(100%);
     }
   
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
 
 /* ANIMATION */
-
-
-
 
 
 #sectionPin {
@@ -509,7 +506,7 @@ a{
 .contenedor_texto {
   color: #000;
   font-size: 2.5rem;
-  width: 90vmax;
+  width: 60vmax;
 }
 
 .contenedor_img{
@@ -659,18 +656,23 @@ a{
   color: #000;
   animation: efect auto linear both ;
   animation-timeline: view();
-  animation-range: entry 20% cover 30%;
+  animation-range: entry 20% cover 35%;
 }
 
 @keyframes efect {
-  from {
+  0%{
     opacity: 0.1;
-    translate: 200px 0;
+    transform: translateY(100%);
   }
 
-  to {
+  50%{
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+
+  100% {
     opacity: 1;
-    translate: 0 0;
+    transform: translateY(0);
   }
 }
 
