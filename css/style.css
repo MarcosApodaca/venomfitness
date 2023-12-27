@@ -945,11 +945,11 @@ ul{
   color: rgba(0, 0, 0, .9);
   text-transform: uppercase;
   text-align: center;
+
 }
 
 @media ( min-width: 768px) { 
   .head-inscripcion{
-    text-align: start;
     font-size: 5rem;
   }
 }
@@ -977,13 +977,13 @@ ul{
   gap: 2.5rem;
   margin-top: 5rem;
   margin-bottom: 10rem;
-}
+  }
 }
 
 .pago-contenido{
   background-color: #19191a;
   border-radius: 3rem;
-  height: 35rem;
+  height: 40rem;
   width: 80%;
   margin: 0 auto;
   box-shadow:  1px 1px 5px;
@@ -1085,11 +1085,17 @@ ul{
   color: #fff;
 }
 
+.contenedor_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
 
 .pago-btn{
-  width: 89%;
-  margin-top: 3rem;
-  
+  width: 50%;
+
   background-color: var(--secundario);
   border-radius: .7rem;
   border: solid var(--secundario) 1px;
@@ -1097,9 +1103,8 @@ ul{
   font-size: 2rem;
 }
 
-.btn1{
-  margin-top: 5rem;
-}
+
+
 
 .pago-btn:hover{
   animation: shadow-drop-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
