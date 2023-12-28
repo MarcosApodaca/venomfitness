@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-            <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venom Fitness</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Explora Venom Fitness en el Vendrell: tu destino único en la región para alcanzar tus metas de fitness. Sumérgete en un gimnasio moderno con instalaciones de última generación, programas de entrenamiento personalizados y un entorno inspirador. ¡Únete a nosotros para transformar tu vida a través del fitness! Punto oficial de la casa Hammer Strength.">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Gimnasio Venom Fitness en el Vendrell">
+    <meta property="og:description" content="Sumérgete en un gimnasio moderno con instalaciones de última generación">
+    <meta property="og:image" content="/image/venomfitness.jpg">
+    <meta property="og:image:alt" content="logo de Venom Fitness">
+    <!--  -->
+    <meta name="keywords" content="venom fitness, gimnasio en el vendrell">
+    <link rel="canonical" href="https://venomfitness.es/">
     <meta name="theme-color" content="#09f">
+    <link rel="icon" type="image/jpg" href="./img/venomfitness_logo.png">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./script.js"></script>
@@ -14,7 +25,7 @@
         <div class="contenedor">
             <nav class="navegacion_grid">
 
-                <a href="./index.html"><img class="navegacion_logo" src="./img/backGroud-pago.png" alt="logo"></a>
+                <a href="./index.html"><img class="navegacion_logo" src="./img/venomfitness_logo.png" alt="Logo de Venom Fitness"></a>
                 <button  id="navToggle"  class="menu">
                     <div></div>
                     <div></div>
@@ -62,7 +73,7 @@
                 <div class="hero-h">
                 
                     <h1 class="hero_h1">VENOM FITNESS</h1>
-                    <h4>BE <span>UNIQUE</span> BE DIFERENCE</h4>
+                    <h4>BE <span>UNIQUE</span> BE DIFFERENT</h4>
                    
                 </div>
                 <a class="contenedor" href="./inscripcion.html"> <button class="hero_btn">INSCRIBETE</button></a>
@@ -77,22 +88,22 @@
                 <div class="contenedor_texto">
                     <h3 class="pin-h3">Somos el gimnasio que redefine tus límites</h3>
                      <div>
-                    <img class="contenedor_img" src="./img/hs-logo.png" alt="">
-                    <img class="contenedor_img" src="./img/life-logo.png" alt="">
+                    <img class="contenedor_img" src="./img/hs-logo.png" alt="logo de Hammer Strength">
+                    <img class="contenedor_img" src="./img/life-logo.png" alt="logo de life fitness">
                     </div>
                 </div>
                     <div class="pin-content">
                     <picture >
                         <source srcset="./img/render/pin1.webp" type="image/webp">
-                        <img class="pin_img" loading="lazy" src="./img/render/pin1.jpg" alt="">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin1.jpg" alt="venom fitness imaga de sala">
                     </picture>
                     <picture>
                         <source srcset="./img/render/pin2.webp" type="image/webp">
-                        <img class="pin_img" loading="lazy" src="./img/render/pin2.jpg" width="500" height="300" alt="">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin2.jpg" width="500" height="300" alt="venom fitness imaga de sala">
                     </picture>
                     <picture>
                         <source srcset="./img/render/pin3.webp" type="image/webp">
-                        <img class="pin_img" loading="lazy" src="./img/render/pin3.jpg" width="500" height="300" alt="">
+                        <img class="pin_img" loading="lazy" src="./img/render/pin3.jpg" width="500" height="300" alt="venom fitness imaga de sala">
                     </picture>
                    
                      
@@ -201,7 +212,34 @@
            </ul>
        </div>
    </section> -->
-   <div>
+
+   <main class="main_slide">
+        <h2 class="main_head">VEN A NUESTRAS INSTALACIONES</h2>
+    <div class="slider">
+        <a name="img_1">
+        <img src="./img/render/pin1.webp" alt="venom fitness imaga de sala">
+        </a>
+    
+   
+        <a name="img_2">
+        <img src="./img/render/pin2.webp" alt="venom fitness imaga de sala">
+        </a>
+ 
+   
+        <a name="img_3">
+        <img src="./img/render/pin3.webp" alt="venom fitness imaga de sala">
+        </a>
+    </div>
+    <ul class="markers">
+        <li><a href="#img_1"></a></li>
+        <li><a href="#img_2"></a></li>
+        <li><a href="#img_3"></a></li>
+        <li><a href="#img_4"></a></li>
+      </ul>
+
+
+   </main>
+    
    
    <article class="contenedor article">
     <div class="article_text">
@@ -210,7 +248,7 @@
     </div>
     <picture class="article_img">
         <source srcset="./img/render/crossfit.webp" type="image/webp">
-        <img loading="lazy" src="./img/render/crossfit.jpg" width="500" height="300" alt="zona de crossfit">
+        <img loading="lazy" src="./img/render/crossfit.jpg"  alt="zona de crossfit">
     </picture>
 
     <div class="article_text">
@@ -219,7 +257,7 @@
     </div>
     <picture class="article_img1">
         <source srcset="./img/render/cardio.webp" type="image/webp">
-        <img loading="lazy" src="./img/render/cardio.jpg" width="500" height="300" alt="zona de cardio">
+        <img loading="lazy" src="./img/render/cardio.jpg"  alt="zona de cardio">
     </picture>
     
     <div class="article_text">
@@ -228,18 +266,17 @@
     </div>
     <picture class="article_img">
         <source srcset="./img/render/mancuerna.webp" type="image/webp">
-        <img loading="lazy" src="./img/render/mancuerna.jpg" width="500" height="300" alt="">
+        <img loading="lazy" src="./img/render/mancuerna.jpg" alt="zona de mancuerna">
     </picture>
 
 </article>
 
-    
 
-   <footer>
+<footer>
         <div class="contenedor">
             <div class="contenedor-flex">
                 <div class="footer-logo">
-                    <img src="./img/backGroud-pago.png" alt="Logo de la empresa">
+                    <img src="./img/venomfitness_logo.png" alt="Logo de Venom Fitness">
                 </div>
                 <div class="footer-links">
                     

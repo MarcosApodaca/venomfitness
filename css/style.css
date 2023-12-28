@@ -645,7 +645,7 @@ a{
 }
 
 @media ( min-width: 768px) { 
-  .article_img{
+  .article_img, .article_img1{
     max-width: 100%;
     width: 500px;
     height: 300px;
@@ -678,7 +678,106 @@ a{
 
 /*SLIDE */
 
-.slide_titulo{
+
+.main_slide {
+  margin-top: 10rem;
+  timeline-scope: --carousel;
+}
+
+@media ( min-width: 768px) { 
+  .main_slide {
+    display: none;
+  }
+}
+
+.main_head{
+  font-size: 3rem;
+  text-align: center;
+  color: var(--black);
+}
+.markers li:nth-child(1) {
+  --i: 1;
+}
+
+.markers li:nth-child(2) {
+  --i: 2;
+}
+
+.markers li:nth-child(3) {
+  --i: 3;
+}
+
+.markers li:nth-child(4) {
+  --i: 4;
+}
+
+.slider {
+  scroll-timeline: --carousel x;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, .1);
+}
+
+.markers a {
+  display: block;
+  width: 16px;
+  aspect-ratio: 1;
+  background: var(--black);
+  opacity: .7;
+  border-radius: 50%;
+
+  animation: activate linear;
+  animation-timeline: --carousel;
+  animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+}
+
+@keyframes activate {
+  0%,
+  100% {
+    background: var(--secundario);
+    opacity: 1;
+  }
+}
+
+.slider a {
+  flex: 0 0 100%;
+  width: 100%;
+
+  scroll-snap-align: center;
+}
+
+.slider img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.markers {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  list-style: none;
+  font-size: 2em;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+
+/* ......... */
+
+
+
+/* .slide_titulo{
   text-align: center;
   color: #000 ;
   font-size: 3.5rem;
@@ -724,8 +823,8 @@ a{
   .slide-contenedor{
     max-width: 110rem;
     /*right: 15%;*/
-  }
-}
+  /* }
+} */
 
 
 .slide ul {
@@ -800,7 +899,7 @@ a{
 .slide_info p {
   margin-left: 5rem;
   color: #000;
-}
+} */
 
 
 
@@ -990,7 +1089,7 @@ ul{
 }
 
 .pago-contenido:first-child{
-  background-image: url(../img/backGroud-pago.png);
+  background-image: url(../img/venomfitness_logo.png);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position-x: 90% ;
@@ -1173,7 +1272,7 @@ ul{
 
 
 
-.entrada_img{
+.entrada_img img{
   width: 100%;
   border-radius: 3px;
   margin-bottom: 10rem;
@@ -1181,7 +1280,7 @@ ul{
 }
 
 @media ( min-width: 768px) { 
-  .entrada_img {
+  .entrada_img img{
     width: 120%;
   }
 }
@@ -1242,8 +1341,4 @@ ul{
 .estalecimiento{
   color: #000;
   text-align: center;
-}
-
-.iframe{
-  background-color: #000;
 }
