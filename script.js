@@ -1,22 +1,3 @@
-// const header = document.getElementById('m-header');
-
-// window.addEventListener('scroll', () => {
-//     // Obtén la posición de desplazamiento vertical
-//     const scrollY = window.scrollY;
-
-//     // Define la altura a la que quieres que cambie el fondo (por ejemplo, 100 píxeles)
-//     const scrollThreshold = 50;
-
-//     if (scrollY > scrollThreshold) {
-//         // Cambia el fondo cuando se hace suficiente scroll
-//         header.style.backgroundColor = "#000"; // Nuevo color de fondo
-//     } else {
-//         // Vuelve al fondo original si se desplaza hacia arriba
-//         header.style.backgroundColor = 'rgba(0, 0, 0, .5) '; // Color de fondo original
-//     }
-// });
-
-
 
 const navToggle = document.getElementById("navToggle");
 const menu_nav = document.getElementById("menu_nav");
@@ -36,6 +17,58 @@ navToggle.addEventListener('click', function() {
 });
 
 
+// CARRUSEL
+
+document.addEventListener("DOMContentLoaded", function () {
+const slider = document.querySelector('.grande')
+const items = document.querySelectorAll('.carrousel_img')
+
+let currentIndex = 0;
+let touchStartX = 0;
+
+function updateSlider() {
+  slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  if (currentIndex < items.length - 1) {
+	currentIndex++;
+  } else {
+	
+	currentIndex = 0;
+  }
+  updateSlider();
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+	currentIndex--;
+  } else {
+	
+	currentIndex = items.length - 1;
+  }
+  updateSlider();
+}
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  if (touchStartX - event.touches[0].clientX > 50) {
+	nextSlide();
+  } else if (event.touches[0].clientX - touchStartX > 50) {
+	prevSlide();
+  }
+}
+
+slider.addEventListener("touchstart", handleTouchStart, { passive: true });
+slider.addEventListener("touchmove", handleTouchMove, { passive: true });
+
+setInterval(nextSlide, 4000); 
+});
+
+
 
 
 const $sectionPin = document.querySelector('#sectionPin');
@@ -44,7 +77,7 @@ const $pinWrap = document.querySelector('.pin-wrap');
 
 /* Stretch it out, so that we create room for the horizontal scroll animation */
 $sectionPin.style.height = '500vh';
-$sectionPin.style.overflow = 'visible'; // To make position sticky work …
+$sectionPin.style.overflow = 'visible'; 
 
 /* Stick to Top */
 $pinWrapSticky.style.height = '100vh';
@@ -74,10 +107,3 @@ $pinWrap.animate(
 	}
 );
 
-// navToggle.addEventListener("click", function() {
-//     if (menu_nav.classList.contains("hidden")) {
-//       menu_nav.classList.remove("hidden"); // Mostrar el menú
-//     } else {
-//       menu_nav.classList.add("hidden"); // Ocultar el menú
-//     }
-//   });
