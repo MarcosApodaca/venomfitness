@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "My-font2";
-  src: url(./HelveticaNowText-Light.woff2) format('woff2');
+  src: url(./HelveticaNowText-Light.woff2) format('woff2') ;
   font-weight: normal;
   font-style: normal;
   font-display: swap
