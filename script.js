@@ -1,4 +1,3 @@
-
 const navToggle = document.getElementById("navToggle");
 const menu_nav = document.getElementById("menu_nav");
 
@@ -6,6 +5,33 @@ const parrafo = document.getElementById('texto-largo');
 const parrafo1 = document.getElementById('texto-largo1');
 const infoLlamada = document.getElementById('infoLlamada');
 const infoCorreo = document.getElementById('infoCorreo');
+const close = document.getElementById("close")
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    mostrarPopup(); 
+});
+
+function mostrarPopup() {
+    const popup = document.getElementById("miPopup");
+	
+
+    popup.style.display = "block";
+	
+
+    document.addEventListener("click", function(event) {
+        const esPopup = popup.contains(event.target);
+        if (!esPopup && popup.style.display !== "none") {
+            cerrarPopup();
+        }
+    });
+}
+
+close.addEventListener('click', cerrarPopup)
+function cerrarPopup() {
+    const popup = document.getElementById("miPopup");
+    popup.style.display = "none";
+}
 
 
 navToggle.addEventListener('click', function() {
