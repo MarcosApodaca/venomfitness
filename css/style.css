@@ -902,6 +902,10 @@ ul{
   box-shadow:  1px 1px 5px;
 }
 
+.premium{
+  position: relative;
+}
+
 .pago-contenido:first-child{
   background-image: url(../img/venomfitness_logo.png);
   background-size: 50%;
@@ -956,7 +960,21 @@ ul{
   padding: 1rem;
 }
 
-
+.contenido_premium{
+  position: absolute;
+  background-color: #EF0D33;
+  margin: 0 auto;
+  width: 50%;
+  height: 40px;
+  border-radius: 2px;
+  left: 100px;
+  transform: rotate(-30deg);
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'My-font1';
+  font-weight: 900;
+  color: #ECECEC;
+}
 
 
 @media ( min-width: 768px) { 
@@ -1008,7 +1026,6 @@ ul{
 
 .pago-btn{
   width: auto;
-
   background-color: var(--secundario);
   border-radius: .7rem;
   border: solid var(--secundario) 1px;
