@@ -825,18 +825,25 @@ ul{
 
 /*INSCRIPCION*/
 
+.contenedor-card{
+  max-width: 150rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .head-inscripcion{
   margin-top: 15rem;
   font-size: 4rem;
-  color: rgba(0, 0, 0, .9);
   text-transform: uppercase;
   text-align: center;
-
+  background-image: linear-gradient(to right, #f8de67, #19191a);
+  -webkit-background-clip: text; 
+  color: transparent;
 }
 
 @media ( min-width: 768px) { 
   .head-inscripcion{
-    font-size: 5rem;
+    font-size: 6.5rem;
   }
 }
 
@@ -846,53 +853,39 @@ ul{
 }
 
 .pago-grid{
- 
-  display: grid;
-  grid-template-rows: repeat(3,1fr);
-  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin-top: 5rem;
   margin-bottom: 10rem;
+  padding: 1rem;
 }
 
 @media ( min-width: 768px) { 
-  
-.pago-grid{
-  display: grid;
-  grid-template-rows: none;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2.5rem;
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+  .pago-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    margin: 5rem;
   }
 }
 
+@media (min-width: 992px){
+  .pago-grid{
+    display: grid;
+    grid-template-rows: none;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    }
+}
+
 .pago-contenido{
+  display: grid;
   background-color: #19191a;
-  border-radius: 3rem;
-  height: 40rem;
-  width: 80%;
-  margin: 0 auto;
-  box-shadow:  1px 1px 5px;
-}
-
-
-.pago-contenido:first-child{
-  background-image: url(../img/venomfitness_logo.png);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position-x: 90% ;
-  background-position-y: 35% ;
-  background-color: #020202;
-}
-
-.pago-contenido:first-child .pago_lista{
-  color:#f8de67
-}
-.pago-contenido:first-child p{
-  color:#f8de67
-}
-
-.pago-contenido:nth-child(2){
+  border-radius: 1rem;
+  height: 45rem;
   background-image: url(../img/Png-White.png);
   background-size: 50%;
   background-repeat: no-repeat;
@@ -900,40 +893,51 @@ ul{
   background-position-y: 35% ;
 }
 
-.pago-contenido:last-child{
-  background-image: url(../img/Png-Black[1898].png);
-  background-color: #ECECEC;
+
+.pago-contenido:nth-child(1){
+  z-index: 2;
+  grid-row: 1;
+  grid-column: 3/4;
+  background-image: url(../img/venomfitness_logo.png);
   background-size: 50%;
   background-repeat: no-repeat;
-  background-position-x: 90% ;
+  background-position-x: 95% ;
   background-position-y: 35% ;
+  box-shadow:  1px 1px 5px;
 }
 
-.pago-contenido:last-child .pago_head
-{
-  color: #000;
+@media ( min-width: 768px) { 
+  .pago-contenido:nth-child(1){
+    grid-column: 1/2;
+  }
 }
-.pago-contenido:last-child .pago_lista
-{
-  color: #000;
-}
-.pago-contenido:last-child p
-{
-  color: #000;
+@media ( min-width: 992px) { 
+  .pago-contenido:nth-child(1){
+    transform: scale(1.1);
+    grid-column: 3/4;
+  }
 }
 
-.pago_premium{
+.pago-contenido:nth-child(1) .pago_head{
   color: #f8de67;
   font-family: 'My-font1';
-  font-size: 2rem;
+  font-size: 2.3rem;
+  text-transform: uppercase;
   text-align: center;
   padding: 1rem;
+}
+
+.pago-contenido:nth-child(1)  .pago_lista{
+  color:#f8de67
+}
+.pago-contenido:nth-child(1) p{
+  color:#f8de67
 }
 
 
 @media ( min-width: 768px) { 
   .pago-contenido{
-    width: 100%;
+    width: 30rem;
   }
 }
 
@@ -947,10 +951,20 @@ ul{
 }
 
 .pago_price {
+  position: relative;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-left: 2rem;
   font-family: 'My-font1';
+  
+}
+
+.span{
+  position: absolute;
+  color: #d1d1d1;
+  font-size: 10px;
+  top:10px;
+  margin-left: 3px;
 }
 
 .pago_fecha{
@@ -977,36 +991,6 @@ ul{
   margin-top: 5rem;
 }
 
-.sold_out{
-  background-color: #EF0D33;
-  width: 50%;
-  height: 50px;
-  border-radius: 2px;
-  padding: 1rem;
-  text-align: center;
-  font-family: 'My-font1';
-  color: #ECECEC;
-  border-radius: .7rem;
-  border: solid var(#EF0D33) 1px;
-  padding: 1rem;
-}
-
-.sold_out a {
-  font-size: 2rem;
-}
-
-@media ( min-width: 768px) { 
-  .sold_out a{
-    font-size: 1.5rem;
-  }
-}
-
-@media ( min-width: 996px) { 
-  .sold_out a{
-    font-size: 2rem;
-  }
-}
-
 
 .pago-btn{
   width: auto;
@@ -1015,6 +999,7 @@ ul{
   border: solid var(--secundario) 1px;
   padding: 1rem;
   font-size: 2rem;
+  margin-bottom:5rem ;
 }
 
 .pago-btn a { 
