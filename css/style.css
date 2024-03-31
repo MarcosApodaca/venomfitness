@@ -472,8 +472,8 @@ a{
   font-weight: bold;
   padding: 1rem;
   animation: btn 1s ease-in-out both;
-  color: #000;
-  border-color: #caa900;
+  color: #19191a;
+  border-color: transparent;
   z-index: 5;
 }
 
