@@ -959,6 +959,12 @@ ul{
   
 }
 
+.span_price{
+  background-color: #616b74;
+  padding: .3rem;
+  border-radius: 5px;
+}
+
 .span{
   position: absolute;
   color: #d1d1d1;
