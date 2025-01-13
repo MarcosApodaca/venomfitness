@@ -37,7 +37,7 @@
                         <span class="line -left"></span>
                         <span class="line -bottom"></span>
                     </a>
-                    <a class="enlace" href="./instalaciones.html">Instalaciones</a>
+                    <a class="enlace" href="./merchandising.html">Merchandising</a>
                     <a class="enlace" href="./inscripcion.html">INSCRÍBETE</a>
                     <br>
                     <p id="texto-largo" class="menu_info" ><strong>Horario:</strong> <br>
@@ -63,51 +63,46 @@
         </div>
     </header>
 
-    <main class="contenedor ">
-        <h2 class="intalacion_title">NUESTRAS INSTALACIONES</h2>
-        <div class="entrada_grid">
-            <P>Ven y sumérgete en un ambiente energético donde encontrarás lo mejor en equipamiento y entrenamiento. Nuestro compromiso es proporcionarte un espacio que inspire y desafíe.</P>
-            <picture class="entrada_img">
-                <source srcset="./img/render/0.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/0.jpg" alt="">
-            </picture>
+    <main class="contenedor merch merch_grid">
+        <div class="gallery-container">
+            <img id="currentImage"  class="camiseta" src="./img/merch/camiseta2.jpg" alt="camiseta">
+            <div class="thumbnails">
+                <div>
+                <img  src="./img/merch/camiseta1.jpg" alt="Camiseta 1" onclick="changeImage(this)">
+                </div>
+                <div>
+                <img  src="./img/merch/DSC05861.JPG" alt="Camiseta 2" onclick="changeImage(this)">
+                </div>
+                <img  src="./img/merch/DSC05862.JPG" alt="Camiseta 3" onclick="changeImage(this)">
+            </div>
         </div>
 
-        <div class="intalacion_grid">
-            <picture class="intalacion_img">
-                <source srcset="./img/render/1.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/1.jpg"  alt="">
-            </picture>
-        <div>
-            <picture class="intalacion_img">
-                <source srcset="./img/render/2.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/2.jpg" alt="">
-            </picture>
-            <picture class="intalacion_img">
-                <source srcset="./img/render/3.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/3.jpg"  alt="">
-            </picture>
+        <div class="conten_info">
+            <h1>Camiseta Exclusiva Venom Fitness – "Better Than Your Excuses"</h1>
+            <p>19,90€ <span class="descuento">24,90€</span></p>
+            <p>Logo minimalista "VF" frontal y estampado trasero blanco: "Better Than Your Excuses"
+            <br><br>
+            Fabricada con materiales de alta calidad, es ligera, transpirable y perfecta tanto para dominar tus entrenamientos como para destacar fuera del gimnasio. Su diseño oversize ofrece libertad de movimiento y un look moderno y relajado.
+            </p>
+            <p>El modelo mide 175cm pesa 85kg y lleva talla M.</p>
+            <p>Color: Negro</p>
+            <img class="color_camiseta" src="./img/merch/camiseta2.jpg" alt="camiseta">
+            <p>Talla</p>
+            <div class="tallas">
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+            </div>
+            <div class="buy-button-container" id="buyButtonContainer">
+                <button type="submit" class="btn_reserva" href="https://buy.stripe.com/cN23dqbrZciCdmo8ww">RESERVAR</button>
+            </div>
+            <p>Detalles</p>
+            <p>PREVENTA. Las camisetas estarán disponibles para recoger a partir de Febrero en la recepción del gimnasio.  </p>
+            <p>⏳ Reserva disponible hasta el 31 de enero.</p>
         </div>
-        
-            <picture class="intalacion_img">
-                <source srcset="./img/render/4.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/4.jpg" alt="">
-            </picture>
-            <picture class="intalacion_img">
-                <source srcset="./img/render/5.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/5.jpg" alt="">
-            </picture>
-            <picture class="intalacion_img">
-                <source srcset="./img/render/6.webp" type="image/webp">
-                <img loading="lazy" src="./img/render/6.jpg" alt="">
-            </picture>
-    
-        </div>
-        
     </main>
   
-
-
 
     <footer>
         <div class="contenedor">

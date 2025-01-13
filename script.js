@@ -133,3 +133,62 @@ $pinWrap.animate(
 	}
 );
 
+function changeImage(thumbnail) {
+  const mainImage = document.getElementById('currentImage');
+  const tempSrc = mainImage.src;
+  mainImage.src = thumbnail.src;
+  thumbnail.src = tempSrc;
+}
+
+
+const buyButtonContainer = document.getElementById('buyButtonContainer');
+const buyButtonOriginalPosition = buyButtonContainer.offsetTop; // Obtén la posición inicial del botón en la página
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + window.innerHeight; // Posición actual del scroll más la altura de la ventana
+
+  if (scrollY >= buyButtonOriginalPosition + buyButtonContainer.offsetHeight) {
+    buyButtonContainer.classList.add('hidden'); // Oculta el botón fijo al alcanzar su posición original
+  } else {
+    buyButtonContainer.classList.remove('hidden'); // Muestra el botón fijo al subir
+  }
+});
+
+
+const express = require('express');
+const stripe = require('stripe')('tu_clave_secreta_de_stripe');
+const app = express();
+
+app.use(express.urlencoded({ extended: true })); // Para leer datos del formulario
+
+app.post('/create-checkout-session', async (req, res) => {
+  const selectedSize = req.body.size; // Obtiene la talla seleccionada
+
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price_data: {
+            currency: 'eur',
+            product_data: {
+              name: 'Camiseta Venom Fitness',
+              description: `Talla: ${selectedSize}`, // Aquí se incluye la talla
+            },
+            unit_amount: 1990, // Precio en centavos (19,90€)
+          },
+          quantity: 1,
+        },
+      ],
+      mode: 'payment',
+      success_url: 'https://tu-sitio.com/success',
+      cancel_url: 'https://tu-sitio.com/cancel',
+    });
+
+    res.redirect(303, session.url);
+  } catch (error) {
+    res.status(500).send(`Error al crear la sesión de pago: ${error.message}`);
+  }
+});
+
+app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
